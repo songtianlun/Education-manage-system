@@ -1,0 +1,78 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Education manage system - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/Education manage system.res" /d "_DEBUG" "C:\我的文档\我的程序\Education manage system\Education manage system.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP172.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Debug/" /Fp"Debug/Education manage system.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\我的文档\我的程序\Education manage system\Education manage system.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP172.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP173.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Education manage system.pdb" /debug /machine:I386 /out:"Debug/Education manage system.exe" /pdbtype:sept 
+".\Debug\Education manage system.obj"
+".\Debug\StdAfx.obj"
+".\Debug\Education manage system.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP173.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+Education manage system.cpp
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(840) : warning C4101: 'index' : unreferenced local variable
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(3564) : warning C4101: 'stop' : unreferenced local variable
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(3565) : warning C4101: 'id' : unreferenced local variable
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(4560) : warning C4101: 'stop' : unreferenced local variable
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(4561) : warning C4101: 'id' : unreferenced local variable
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(5556) : warning C4101: 'stop' : unreferenced local variable
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(5557) : warning C4101: 'id' : unreferenced local variable
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(7004) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(7008) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(6727) : warning C4101: 'score' : unreferenced local variable
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(6724) : warning C4101: 'stop' : unreferenced local variable
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(6709) : warning C4101: 'class_p' : unreferenced local variable
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(6722) : warning C4101: 'newscore' : unreferenced local variable
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(6708) : warning C4101: 'college_p' : unreferenced local variable
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(6725) : warning C4101: 'id' : unreferenced local variable
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(9291) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(9295) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(9367) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(9371) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(9443) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(9447) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(9519) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(9523) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(9595) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(9599) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(9671) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(9675) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(8607) : warning C4101: 'score1' : unreferenced local variable
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(8607) : warning C4101: 'score2' : unreferenced local variable
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(8607) : warning C4101: 'score5' : unreferenced local variable
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(8607) : warning C4101: 'score6' : unreferenced local variable
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(8607) : warning C4101: 'score3' : unreferenced local variable
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(8607) : warning C4101: 'score4' : unreferenced local variable
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(9704) : warning C4101: 'gread' : unreferenced local variable
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(9775) : warning C4101: 'gread' : unreferenced local variable
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(7408) : warning C4700: local variable 'page' used without having been initialized
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(7409) : warning C4700: local variable 'sum' used without having been initialized
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(8137) : warning C4700: local variable 'page' used without having been initialized
+C:\我的文档\我的程序\Education manage system\Education manage system.cpp(8138) : warning C4700: local variable 'sum' used without having been initialized
+Linking...
+Creating command line "bscmake.exe /nologo /o"Debug/Education manage system.bsc"  ".\Debug\StdAfx.sbr" ".\Debug\Education manage system.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+Education manage system.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

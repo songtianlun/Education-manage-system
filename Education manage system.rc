@@ -1,0 +1,2467 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_EDUCATIONMANAGESYSTEM ICON    DISCARDABLE     "Education manage system.ico"
+IDI_SMALL               ICON    DISCARDABLE     "small.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_STUDENT MENU DISCARDABLE 
+BEGIN
+    POPUP "个人信息"
+    BEGIN
+        MENUITEM "个人信息查询",                s_account_inquire
+        MENUITEM "修改账户密码",                s_account_password
+    END
+    MENUITEM "院系信息查询",                s_college_inquire
+    MENUITEM "班级信息查询",                s_class_inquire
+    MENUITEM "教师信息查询",                s_teacher_inquire
+    MENUITEM "课程信息查询",                s_course_inquire
+    MENUITEM "个人成绩查询",                s_score_self_inquire
+    POPUP "帮助"
+    BEGIN
+        MENUITEM "关于",                        help_about
+        MENUITEM "退出系统",                    help_exit
+    END
+END
+
+IDR_MENU_TEACHER MENU DISCARDABLE 
+BEGIN
+    POPUP "个人信息"
+    BEGIN
+        MENUITEM "个人基本信息",                t_account_inquire
+        MENUITEM "修改账户密码",                t_account_password
+    END
+    POPUP "院系信息查询"
+    BEGIN
+        MENUITEM "院系信息查询",                t_college_inquire
+        MENUITEM "院系信息修改",                t_college_modification
+    END
+    MENUITEM "班级信息查询",                t_class_inquire
+    MENUITEM "教师信息查询",                t_teacher_inquire
+    MENUITEM "课程信息查询",                t_course_inquire
+    MENUITEM "学生信息查询",                t_student_inquire
+    POPUP "成绩信息管理"
+    BEGIN
+        MENUITEM "个人成绩查询",                t_score_self_inquire
+        MENUITEM "成绩信息修改",                t_score_modification
+        MENUITEM "集体成绩查询",                t_score_team_inquire
+        MENUITEM "成绩信息录入",                t_score_enter
+        POPUP "成绩分析"
+        BEGIN
+            MENUITEM "集体总分输出",                t_score_analyse_sum
+            MENUITEM "集体均分输出",                a_score_analyse_average
+            MENUITEM "统计不及格",                  t_score_analyse_fail
+        END
+    END
+    POPUP "帮助"
+    BEGIN
+        MENUITEM "关于",                        help_about
+        MENUITEM "退出系统",                    help_exit
+    END
+END
+
+IDR_MENU_ADMIN MENU DISCARDABLE 
+BEGIN
+    POPUP "个人信息"
+    BEGIN
+        MENUITEM "个人基本信息",                a_self_inquire
+        MENUITEM "修改账户密码",                a_self_password
+    END
+    POPUP "院系信息管理"
+    BEGIN
+        MENUITEM "院系信息查询",                a_college_inquire
+        MENUITEM "院系信息修改",                a_college_modification
+    END
+    POPUP "专业信息管理"
+    BEGIN
+        MENUITEM "专业信息查询",                a_profession_inquire
+        MENUITEM "专业信息修改",                a_profession_modification
+    END
+    POPUP "班级信息管理"
+    BEGIN
+        MENUITEM "班级信息查询",                a_class_inquire
+        MENUITEM "班级信息修改",                a_class_modification
+    END
+    POPUP "课程信息查询"
+    BEGIN
+        MENUITEM "基本课程查询",                a_course_inquire
+        MENUITEM "基本课程修改",                a_course_modification
+    END
+    POPUP "管理员账户"
+    BEGIN
+        MENUITEM "管理员账户查询",              a_account_inquire
+        MENUITEM "管理员账户修改",              a_account_modification
+    END
+    POPUP "教师信息管理"
+    BEGIN
+        MENUITEM "教师信息查询",                a_teacher_inquire
+        MENUITEM "教师信息修改",                a_teacher_modification
+    END
+    POPUP "学生信息管理"
+    BEGIN
+        MENUITEM "学生信息查询",                a_student_inquire
+        MENUITEM "学生信息修改",                a_student_modification
+    END
+    POPUP "成绩信息管理"
+    BEGIN
+        MENUITEM "全部成绩查询",                a_score_inquire
+        MENUITEM "成绩信息修改",                a_score_modification
+        MENUITEM "个人成绩查询",                a_score_self_inquire
+        MENUITEM "集体成绩查询",                a_score_term_inquire
+        MENUITEM "成绩信息录入",                a_score_enter
+        POPUP "集体成绩分析"
+        BEGIN
+            MENUITEM "集体总分输出",                a_score_analyse_sum
+            MENUITEM "集体均分输出",                a_score_analyse_average
+        END
+    END
+    POPUP "帮助"
+    BEGIN
+        MENUITEM "关于",                        help_about
+        MENUITEM "退出系统",                    help_exit
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_EDUCATIONMANAGESYSTEM ACCELERATORS MOVEABLE PURE 
+BEGIN
+    "/",            IDM_ABOUT,              ASCII,  ALT, NOINVERT
+    "?",            IDM_ABOUT,              ASCII,  ALT, NOINVERT
+    "^M",           IDC_LOADING_ENTER,      ASCII,  NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  22, 17, 230, 75
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "System"
+BEGIN
+    ICON            IDI_EDUCATIONMANAGESYSTEM,IDC_MYICON,14,9,20,20
+    LTEXT           "教务信息管理系统 1.0",IDC_STATIC,49,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2017",IDC_STATIC,49,20,119,8
+    DEFPUSHBUTTON   "OK",IDOK,195,6,30,11,WS_GROUP
+END
+
+IDD_LOADING DIALOG DISCARDABLE  0, 0, 204, 110
+STYLE DS_SYSMODAL | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "教务信息管理系统——请登录"
+FONT 10, "System"
+BEGIN
+    EDITTEXT        IDC_LOADING_USER,94,35,56,14
+    EDITTEXT        IDC_LOADING_PASSWORD,94,55,56,14,ES_PASSWORD
+    GROUPBOX        "登录",IDC_STATIC,30,24,145,54
+    PUSHBUTTON      "登录",IDC_LOADING_ENTER,41,87,45,15,WS_GROUP
+    CTEXT           "教务信息管理系统",IDC_STATIC,0,11,193,12,SS_CENTERIMAGE
+    CTEXT           "密码",IDC_STATIC,50,55,25,14,SS_CENTERIMAGE
+    CTEXT           "账号",IDC_STATIC,50,35,25,14,SS_CENTERIMAGE
+    PUSHBUTTON      "取消",IDC_LOADING_EXIT,111,87,45,15
+END
+
+IDD_a_account_inquire DIALOG DISCARDABLE  0, 0, 503, 215
+STYLE DS_MODALFRAME | DS_CENTER | WS_CAPTION | WS_SYSMENU
+CAPTION "管理员账户信息查询——管理员端"
+FONT 10, "System"
+BEGIN
+    CTEXT           "账号",IDC_STATIC,10,30,85,15,SS_CENTERIMAGE
+    CTEXT           "姓名",IDC_STATIC,100,30,50,15,SS_CENTERIMAGE
+    CTEXT           "性别",IDC_STATIC,155,30,24,15,SS_CENTERIMAGE
+    CTEXT           "政治面貌",IDC_STATIC,185,30,45,15,SS_CENTERIMAGE
+    CTEXT           "所属学院",IDC_STATIC,235,30,95,15,SS_CENTERIMAGE
+    CTEXT           "所属科目",IDC_STATIC,335,30,95,15,SS_CENTERIMAGE
+    CTEXT           "等级",IDC_STATIC,435,30,56,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_account_inquire_id1,10,50,85,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_name1,100,50,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_sex1,155,50,24,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_face1,185,50,45,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_college1,235,50,95,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_profession1,335,50,95,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_grade1,435,50,56,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_id2,10,70,85,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_name2,100,70,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_sex2,155,70,24,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_face2,185,70,45,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_college2,235,70,95,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_profession2,335,70,95,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_grade2,435,70,56,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_id3,10,90,85,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_name3,100,90,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_sex3,155,90,24,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_face3,185,90,45,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_college3,235,90,95,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_profession3,335,90,95,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_grade3,435,90,56,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_id4,10,110,85,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_name4,100,110,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_sex4,155,110,24,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_face4,185,110,45,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_college4,235,110,95,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_profession4,335,110,95,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_grade4,435,110,56,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_id5,10,130,85,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_name5,100,130,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_sex5,155,130,24,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_face5,185,130,45,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_college5,235,130,95,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_profession5,335,130,95,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_grade5,435,130,56,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_id6,10,150,85,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_name6,100,150,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_sex6,155,150,24,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_face6,185,150,45,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_college6,235,150,95,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_profession6,335,150,95,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_account_inquire_grade6,435,150,56,15,ES_CENTER | 
+                    ES_READONLY
+    GROUPBOX        "管理员信息查询",IDC_STATIC,5,12,492,178
+    EDITTEXT        EDIT_a_account_inquire_page,150,170,199,15,ES_CENTER | 
+                    ES_READONLY
+    PUSHBUTTON      "返回顶部",BUTTON_a_account_inquire_top,100,195,50,15
+    PUSHBUTTON      "上一页",BUTTON_a_account_inquire_prior,174,195,50,15
+    PUSHBUTTON      "下一页",BUTTON_a_account_inquire_next,251,195,49,15
+    PUSHBUTTON      "关闭",BUTTON_a_account_inquire_exit,325,195,50,15
+END
+
+IDD_a_account_modification DIALOG DISCARDABLE  0, 0, 496, 256
+STYLE DS_MODALFRAME | DS_CENTER | WS_CAPTION | WS_SYSMENU
+CAPTION "管理员账户信息修改——管理员端"
+FONT 10, "System"
+BEGIN
+    EDITTEXT        EDIT_a_account_modification_oldid,121,25,79,15,ES_CENTER
+    CTEXT           "请输入账号定位欲修改账号：",IDC_STATIC,15,25,105,15,
+                    SS_CENTERIMAGE
+    CTEXT           "账号",IDC_STATIC,15,45,35,15,SS_CENTERIMAGE
+    CTEXT           "姓名",IDC_STATIC,15,65,35,15,SS_CENTERIMAGE
+    CTEXT           "性别",IDC_STATIC,15,85,35,15,SS_CENTERIMAGE
+    CTEXT           "民族",IDC_STATIC,15,105,35,15,SS_CENTERIMAGE
+    CTEXT           "政治面貌",IDC_STATIC,15,125,35,15,SS_CENTERIMAGE
+    CTEXT           "出生日期",IDC_STATIC,15,145,35,15,SS_CENTERIMAGE
+    CTEXT           "入职日期",IDC_STATIC,15,165,35,15,SS_CENTERIMAGE
+    CTEXT           "所属学院",IDC_STATIC,15,185,35,15,SS_CENTERIMAGE
+    CTEXT           "所属部门",IDC_STATIC,15,205,35,15,SS_CENTERIMAGE
+    CTEXT           "职称",IDC_STATIC,15,225,35,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_account_modification_oldid1,55,45,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_account_modification_oldname,55,65,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_account_modification_oldsex,55,85,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_account_modification_oldnation,55,105,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_account_modification_oldface,55,125,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_account_modification_oldbirth,55,145,145,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_account_modification_oldtime,55,165,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_account_modification_oldcollege,55,185,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_account_modification_oldprofession,55,205,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_account_modification_oldgrade,55,225,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    CTEXT           "账号",IDC_STATIC,225,45,35,15,SS_CENTERIMAGE
+    CTEXT           "姓名",IDC_STATIC,225,65,35,15,SS_CENTERIMAGE
+    CTEXT           "性别",IDC_STATIC,225,85,35,15,SS_CENTERIMAGE
+    CTEXT           "民族",IDC_STATIC,225,105,35,15,SS_CENTERIMAGE
+    CTEXT           "政治面貌",IDC_STATIC,225,125,35,15,SS_CENTERIMAGE
+    CTEXT           "出生日期",IDC_STATIC,225,145,35,15,SS_CENTERIMAGE
+    CTEXT           "入职日期",IDC_STATIC,225,165,35,15,SS_CENTERIMAGE
+    CTEXT           "所属学院",IDC_STATIC,225,185,35,15,SS_CENTERIMAGE
+    CTEXT           "所属部门",IDC_STATIC,225,205,35,15,SS_CENTERIMAGE
+    CTEXT           "职称",IDC_STATIC,225,225,35,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_account_modification_newid,265,45,145,15,
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_account_modification_newname,265,65,145,15,
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_account_modification_newnation,265,105,145,15,
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_account_modification_newface,265,125,145,15,
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_account_modification_newbirth,265,145,145,15,
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_account_modification_newtime,265,165,145,15,
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_account_modification_newcollege,265,185,145,15,
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_account_modification_newprofession,265,205,145,15,
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_account_modification_newgrade,265,225,145,15,
+                    ES_AUTOHSCROLL
+    GROUPBOX        "源数据",IDC_STATIC,9,14,201,236
+    GROUPBOX        "新数据",IDC_STATIC,220,14,200,236
+    PUSHBUTTON      "定位修改",BUTTON_a_account_modification_location,430,45,
+                    45,15
+    PUSHBUTTON      "新管理",BUTTON_a_account_modification_add,430,65,45,15
+    PUSHBUTTON      "保存",BUTTON_a_account_modification_affirm,430,85,45,15
+    PUSHBUTTON      "删除数据",BUTTON_a_account_modification_delete,430,105,
+                    45,15
+    PUSHBUTTON      "关闭",BUTTON_a_account_modification_exit,430,125,45,15
+    EDITTEXT        EDIT_a_account_modification_newsex,266,85,145,15,
+                    ES_AUTOHSCROLL
+END
+
+IDD_a_college_inquire DIALOG DISCARDABLE  0, 0, 315, 189
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "学院信息查询——管理员端"
+FONT 10, "System"
+BEGIN
+    CTEXT           "学院代码",IDC_STATIC,45,15,50,15,SS_CENTERIMAGE
+    CTEXT           "学院名称",IDC_STATIC,105,15,140,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_college_inquire_id1,45,35,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_college_inquire_name1,105,35,140,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_college_inquire_id2,45,55,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_college_inquire_id3,45,75,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_college_inquire_id4,45,95,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_college_inquire_id5,45,115,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_college_inquire_id6,45,135,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_college_inquire_name2,105,55,140,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_college_inquire_name3,105,75,140,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_college_inquire_name4,105,95,140,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_college_inquire_name5,105,115,140,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_college_inquire_name6,105,135,140,15,ES_CENTER | 
+                    ES_READONLY
+    PUSHBUTTON      "返回顶部",BUTTON_a_college_inquire_top,255,35,45,15
+    PUSHBUTTON      "上一页",BUTTON_a_college_inquire_prior,255,55,45,15
+    PUSHBUTTON      "下一页",BUTTON_a_college_inquire_next,255,75,45,15
+    PUSHBUTTON      "关闭",BUTTON_a_college_inquire_exit,255,95,45,15
+    EDITTEXT        EDIT_a_college_inquire_page,120,165,80,15,ES_CENTER | 
+                    ES_READONLY
+    GROUPBOX        "学院基本信息",IDC_STATIC,19,6,231,179
+END
+
+IDD_a_self_check DIALOG DISCARDABLE  0, 0, 302, 188
+STYLE DS_MODALFRAME | DS_CENTER | WS_CAPTION | WS_SYSMENU
+CAPTION "我的账户信息——管理员端"
+FONT 10, "System"
+BEGIN
+    CTEXT           "学    号",IDC_STATIC,35,25,35,10,SS_CENTERIMAGE
+    CTEXT           "姓    名",IDC_STATIC,35,40,35,10,SS_CENTERIMAGE
+    CTEXT           "性    别",IDC_STATIC,35,55,35,10,SS_CENTERIMAGE
+    CTEXT           "民    族",IDC_STATIC,35,85,35,10,SS_CENTERIMAGE
+    CTEXT           "政治面貌",IDC_STATIC,35,100,35,10,SS_CENTERIMAGE
+    CTEXT           "出生日期",IDC_STATIC,35,115,35,10,SS_CENTERIMAGE
+    PUSHBUTTON      "查看",BUTTON_a_self_info_enter,235,21,50,15
+    CTEXT           "部    门",IDC_STATIC,35,145,35,10,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_self_info_id,70,21,130,14,ES_READONLY | NOT 
+                    WS_TABSTOP
+    CTEXT           "专    业",IDC_STATIC,35,160,35,10,SS_CENTERIMAGE
+    PUSHBUTTON      "关闭",BUTTON_a_self_info_exit,235,110,50,15
+    EDITTEXT        EDIT_a_self_info_name,70,35,130,15,ES_READONLY
+    CTEXT           "身    份",IDC_STATIC,35,70,30,10,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_self_info_college,70,140,130,15,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    CTEXT           "入职时间",IDC_STATIC,35,130,35,10,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_self_info_profession,70,155,130,15,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_self_info_identity,70,65,130,15,ES_READONLY
+    EDITTEXT        EDIT_a_self_info_sex,70,50,130,15,ES_READONLY
+    EDITTEXT        EDIT_a_self_info_nation,70,80,130,15,ES_READONLY
+    EDITTEXT        EDIT_a_self_info_face,70,95,130,15,ES_READONLY
+    EDITTEXT        EDIT_a_self_info_birth,70,110,130,15,ES_READONLY
+    EDITTEXT        EDIT_a_self_info_time,70,125,130,15,ES_READONLY
+    GROUPBOX        "个人信息",IDC_STATIC,20,10,195,170
+END
+
+IDD_a_self_password DIALOG DISCARDABLE  0, 0, 169, 111
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "修改密码——管理员端"
+FONT 10, "System"
+BEGIN
+    LTEXT           "请输入当前密码",IDC_STATIC,20,11,60,10
+    LTEXT           "请输入新密码",IDC_STATIC,25,45,50,15
+    LTEXT           "请再次输入新密码",IDC_STATIC,10,65,70,15
+    EDITTEXT        EDIT_a_self_password_old,84,11,65,15,ES_PASSWORD
+    EDITTEXT        EDIT_a_self_password_new1,85,40,65,15,ES_PASSWORD
+    EDITTEXT        EDIT_a_self_password_new2,85,60,65,15,ES_PASSWORD
+    PUSHBUTTON      "确认修改",BUTTON_a_self_password_affirm,15,90,50,15
+    PUSHBUTTON      "取消修改",BUTTON_a_self_password_cancel,90,90,50,15
+    GROUPBOX        "修改密码",IDC_STATIC,5,26,153,56
+END
+
+IDD_a_college_modification DIALOG DISCARDABLE  0, 0, 304, 175
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "院系信息修改——管理员端"
+FONT 10, "System"
+BEGIN
+    CTEXT           "请输入学院代码定位欲修改学院：",IDC_STATIC,15,30,135,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_college_modification_oldid,149,30,40,15,ES_CENTER | 
+                    ES_NUMBER
+    PUSHBUTTON      "定位修改",BUTTON_a_college_modification_location,231,30,
+                    40,15
+    CTEXT           "学院代码",IDC_STATIC,25,50,35,15,SS_CENTERIMAGE
+    CTEXT           "学院名称",IDC_STATIC,65,50,134,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_college_modification_oldid1,25,70,35,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_college_modification_oldname,65,70,134,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "请输入新的学院信息",IDC_STATIC,25,110,128,15,
+                    SS_CENTERIMAGE
+    CTEXT           "学院代码",IDC_STATIC,25,130,35,15,SS_CENTERIMAGE
+    CTEXT           "学院名称",IDC_STATIC,65,130,134,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_college_modification_newid,25,150,35,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_college_modification_newname,65,150,134,15,
+                    ES_CENTER
+    PUSHBUTTON      "确认修改",BUTTON_a_college_modification_affirm,231,70,
+                    40,15
+    PUSHBUTTON      "增添学院",BUTTON_a_college_modification_add,231,50,40,
+                    15
+    PUSHBUTTON      "删除学院",BUTTON_a_college_modification_delete,231,90,
+                    40,15
+    PUSHBUTTON      "关闭",BUTTON_a_college_modification_exit,231,110,40,15
+    CTEXT           "学院信息修改程序",IDC_STATIC,78,3,134,15,SS_CENTERIMAGE
+    GROUPBOX        "源数据",IDC_STATIC,20,19,193,71
+    GROUPBOX        "新数据",IDC_STATIC,20,97,192,74
+END
+
+IDD_a_profession_inquire DIALOG DISCARDABLE  0, 0, 348, 220
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "专业数据查询——管理员端"
+FONT 10, "System"
+BEGIN
+    CTEXT           "代码",IDC_STATIC,15,20,25,15,SS_CENTERIMAGE
+    CTEXT           "专业名称",IDC_STATIC,50,20,150,15,SS_CENTERIMAGE
+    CTEXT           "所属学院",IDC_STATIC,225,20,100,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_profession_inquire_id1,15,36,25,16,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_profession_inquire_id2,15,59,25,16,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_profession_inquire_id3,15,80,25,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_profession_inquire_id4,15,100,25,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_profession_inquire_id5,15,120,25,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_profession_inquire_id6,15,140,25,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_profession_inquire_name1,50,36,150,16,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_profession_inquire_name2,50,59,150,16,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_profession_inquire_name3,50,80,150,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_profession_inquire_name4,50,100,150,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_profession_inquire_name5,50,120,150,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_profession_inquire_name6,50,140,150,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_profession_inquire_college1,225,36,100,16,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_profession_inquire_college2,225,59,100,16,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_profession_inquire_college3,225,80,100,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_profession_inquire_college4,225,100,100,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_profession_inquire_college5,225,120,100,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_profession_inquire_college6,225,140,100,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_profession_inquire_page,100,165,150,15,ES_CENTER | 
+                    ES_READONLY
+    GROUPBOX        "专业信息",IDC_STATIC,8,4,328,182
+    PUSHBUTTON      "返回顶部",BUTTON_a_profession_inquire_top,50,191,50,16
+    PUSHBUTTON      "上一页",BUTTON_a_profession_inquire_prior,125,191,50,16
+    PUSHBUTTON      "下一页",BUTTON_a_profession_inquire_next,200,191,50,16
+    PUSHBUTTON      "关闭",BUTTON_a_profession_inquire_exit,275,191,50,16
+END
+
+IDD_a_profession_modification DIALOG DISCARDABLE  0, 0, 434, 181
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "专业数据修改——管理员端"
+FONT 10, "System"
+BEGIN
+    CTEXT           "请输入专业代码定位欲修改专业：",IDC_STATIC,25,30,125,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_profession_modification_oldid,155,30,41,15,
+                    ES_CENTER | ES_NUMBER
+    CTEXT           "专业代码",IDC_STATIC,25,50,34,15,SS_CENTERIMAGE
+    CTEXT           "专业名称",IDC_STATIC,75,50,150,15,SS_CENTERIMAGE
+    CTEXT           "所属学院名称",IDC_STATIC,249,50,101,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_profession_modification_oldid1,25,70,34,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_profession_modification_oldname,75,70,150,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_profession_modification_oldcollege,249,70,101,15,
+                    ES_CENTER | ES_READONLY
+    CTEXT           "请输入新的专业信息：",IDC_STATIC,25,110,78,15,
+                    SS_CENTERIMAGE
+    CTEXT           "专业代码",IDC_STATIC,25,130,34,15,SS_CENTERIMAGE
+    CTEXT           "专业名称",IDC_STATIC,75,130,150,15,SS_CENTERIMAGE
+    CTEXT           "所属学院名称",IDC_STATIC,249,130,101,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_profession_modification_newid,25,150,34,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_profession_modification_newname,75,150,150,15,
+                    ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_profession_modification_newcollege,249,150,101,15,
+                    ES_CENTER | ES_AUTOHSCROLL
+    GROUPBOX        "源数据",IDC_STATIC,15,10,345,80
+    GROUPBOX        "新数据",IDC_STATIC,16,96,344,74
+    PUSHBUTTON      "定位修改",BUTTON_a_profession_modification_location,369,
+                    30,47,15
+    PUSHBUTTON      "增添专业",BUTTON_a_profession_modification_add,369,50,
+                    47,15
+    PUSHBUTTON      "确认修改 ",BUTTON_a_profession_modification_affirm,369,
+                    70,47,15
+    PUSHBUTTON      "删除专业",BUTTON_a_profession_modification_delete,369,
+                    90,47,15
+    PUSHBUTTON      "关闭",BUTTON_a_profession_modification_exit,369,110,47,
+                    15
+END
+
+IDD_a_course_inquire DIALOG DISCARDABLE  0, 0, 366, 193
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "课程基本信息查询——管理员端"
+FONT 10, "System"
+BEGIN
+    CTEXT           "课程代码",IDC_STATIC,25,20,50,15,SS_CENTERIMAGE
+    CTEXT           "课程名称",IDC_STATIC,100,20,141,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_course_inquire_id1,25,40,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_course_inquire_id2,25,60,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_course_inquire_id3,25,80,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_course_inquire_id4,25,100,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_course_inquire_id5,25,120,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_course_inquire_id6,25,140,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_course_inquire_name1,100,40,175,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_course_inquire_name2,100,60,175,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_course_inquire_name3,100,80,175,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_course_inquire_name4,100,100,175,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_course_inquire_name5,100,120,175,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_course_inquire_name6,100,140,175,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_course_inquire_page,50,160,150,15,ES_CENTER | 
+                    ES_READONLY
+    GROUPBOX        "课程基本信息",IDC_STATIC,7,7,273,173
+    PUSHBUTTON      "返回顶部",BUTTON_a_course_inquire_top,291,40,50,15
+    PUSHBUTTON      "上一页",BUTTON_a_course_inquire_prior,291,60,50,15
+    PUSHBUTTON      "下一页",BUTTON_a_course_inquire_next,291,80,50,15
+    PUSHBUTTON      "关闭",BUTTON_a_course_inquire_exit,291,100,50,15
+END
+
+IDD_a_course_modification DIALOG DISCARDABLE  0, 0, 355, 184
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "对话"
+FONT 10, "System"
+BEGIN
+    CTEXT           "请输入课程代码定位欲修改课程：",IDC_STATIC,25,30,124,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_course_modification_oldid,163,30,43,15,ES_CENTER | 
+                    ES_NUMBER
+    CTEXT           "课程代码",IDC_STATIC,25,50,35,15,SS_CENTERIMAGE
+    CTEXT           "课程名称",IDC_STATIC,75,50,200,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_course_modification_oldid1,25,70,35,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_course_modification_oldname,75,70,200,15,
+                    ES_CENTER | ES_READONLY
+    CTEXT           "请输入新的课程信息：",IDC_STATIC,25,110,80,15,
+                    SS_CENTERIMAGE
+    CTEXT           "课程代码",IDC_STATIC,25,130,35,15,SS_CENTERIMAGE
+    CTEXT           "课程名称",IDC_STATIC,75,130,200,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_course_modification_newid,25,150,35,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_course_modification_newname,75,150,200,15,
+                    ES_CENTER | ES_AUTOHSCROLL
+    PUSHBUTTON      "定位修改",BUTTON_a_course_modification_location,295,30,
+                    40,15
+    PUSHBUTTON      "增添课程",BUTTON_a_course_modification_add,295,50,40,15
+    PUSHBUTTON      "确认修改",BUTTON_a_course_modification_affirm,295,70,40,
+                    15
+    PUSHBUTTON      "删除课程",BUTTON_a_course_modification_delete,295,90,40,
+                    15
+    PUSHBUTTON      "关闭",BUTTON_a_course_modification_exit,295,110,40,15
+    GROUPBOX        "源数据",IDC_STATIC,15,17,270,73
+    GROUPBOX        "新数据",IDC_STATIC,15,99,270,72
+END
+
+IDD_a_class_inquire DIALOG DISCARDABLE  0, 0, 566, 192
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "班级信息查询——管理员端"
+FONT 10, "System"
+BEGIN
+    CTEXT           "班级代码",IDC_STATIC,16,25,34,15,SS_CENTERIMAGE
+    CTEXT           "班级名称",IDC_STATIC,60,25,190,15,SS_CENTERIMAGE
+    CTEXT           "所属专业",IDC_STATIC,259,25,136,15,SS_CENTERIMAGE
+    CTEXT           "所属学院",IDC_STATIC,400,25,99,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_class_inquire_id1,16,45,34,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_class_inquire_name1,60,45,190,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_class_inquire_profession1,259,45,136,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_class_inquire_college1,400,45,99,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_class_inquire_id2,16,65,34,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_class_inquire_name2,60,65,190,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_class_inquire_profession2,259,65,136,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_class_inquire_college2,400,65,99,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_class_inquire_id3,16,84,34,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_class_inquire_name3,60,84,190,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_class_inquire_profession3,259,84,136,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_class_inquire_college3,400,84,99,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_class_inquire_id4,16,105,34,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_class_inquire_name4,60,105,190,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_class_inquire_profession4,259,105,136,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_class_inquire_college4,400,105,99,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_class_inquire_id5,16,125,34,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_class_inquire_name5,60,125,190,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_class_inquire_profession5,259,125,136,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_class_inquire_college5,400,125,99,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_class_inquire_id6,16,145,34,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_class_inquire_name6,60,145,190,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_class_inquire_profession6,259,145,136,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_class_inquire_college6,400,145,99,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_class_inquire_page,159,165,194,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "返回顶部",BUTTON_a_class_inquire_top,506,45,44,15
+    PUSHBUTTON      "上一页",BUTTON_a_class_inquire_prior,506,65,44,15
+    PUSHBUTTON      "下一页",BUTTON_a_class_inquire_next,506,84,44,16
+    PUSHBUTTON      "关闭",BUTTON_a_class_inquire_exit,506,105,44,15
+END
+
+IDD_a_class_modification DIALOG DISCARDABLE  0, 0, 551, 210
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "班级信息修改——管理员端"
+FONT 10, "System"
+BEGIN
+    CTEXT           "请输入班级代码定位欲修改班级：",IDC_STATIC,15,30,120,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_class_modification_oldid,160,30,44,15,ES_CENTER
+    CTEXT           "代码",IDC_STATIC,15,50,30,15,SS_CENTERIMAGE
+    CTEXT           "班级名称",IDC_STATIC,50,50,195,15,SS_CENTERIMAGE
+    CTEXT           "所属专业",IDC_STATIC,250,50,170,15,SS_CENTERIMAGE
+    CTEXT           "所属学院",IDC_STATIC,425,50,100,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_class_modification_oldid1,15,70,30,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_class_modification_oldname,50,70,195,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_class_modification_oldprofession,250,70,170,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_class_modification_oldcollege,425,70,100,15,
+                    ES_CENTER | ES_READONLY
+    CTEXT           "请输入新的班级信息：",IDC_STATIC,15,110,79,15,
+                    SS_CENTERIMAGE
+    CTEXT           "代码",IDC_STATIC,15,130,30,15,SS_CENTERIMAGE
+    CTEXT           "班级名称",IDC_STATIC,50,130,195,15,SS_CENTERIMAGE
+    CTEXT           "所属专业",IDC_STATIC,250,130,170,15,SS_CENTERIMAGE
+    CTEXT           "所属学院",IDC_STATIC,425,130,100,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_class_modification_newid,15,150,30,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_class_modification_newname,50,150,195,15,
+                    ES_CENTER
+    EDITTEXT        EDIT_a_class_modification_newprofession,250,150,170,15,
+                    ES_CENTER
+    EDITTEXT        EDIT_a_class_modification_newcollege,425,150,100,15,
+                    ES_CENTER
+    GROUPBOX        "源数据",IDC_STATIC,7,18,527,72
+    GROUPBOX        "新数据",IDC_STATIC,7,96,527,78
+    PUSHBUTTON      "定位修改",BUTTON_a_class_modification_location,50,180,
+                    50,15
+    PUSHBUTTON      "增添班级",BUTTON_a_class_modification_add,150,180,51,15
+    PUSHBUTTON      "确认修改",BUTTON_a_class_modification_affirm,250,180,51,
+                    15
+    PUSHBUTTON      "删除班级",BUTTON_a_class_modification_delete,350,180,50,
+                    15
+    PUSHBUTTON      "关闭",BUTTON_a_class_modification_exit,450,180,49,15
+END
+
+IDD_a_teacher_inquire DIALOG DISCARDABLE  0, 0, 503, 215
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "管理员账户信息查询——管理员端"
+FONT 10, "System"
+BEGIN
+    CTEXT           "账号",IDC_STATIC,10,30,85,15,SS_CENTERIMAGE
+    CTEXT           "姓名",IDC_STATIC,100,30,50,15,SS_CENTERIMAGE
+    CTEXT           "性别",IDC_STATIC,155,30,24,15,SS_CENTERIMAGE
+    CTEXT           "政治面貌",IDC_STATIC,185,30,45,15,SS_CENTERIMAGE
+    CTEXT           "所属学院",IDC_STATIC,235,30,95,15,SS_CENTERIMAGE
+    CTEXT           "所属科目",IDC_STATIC,335,30,95,15,SS_CENTERIMAGE
+    CTEXT           "等级",IDC_STATIC,435,30,56,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_teacher_inquire_id1,10,50,85,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_name1,100,50,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_sex1,155,50,24,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_face1,185,50,45,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_college1,235,50,95,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_profession1,335,50,95,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_grade1,435,50,56,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_id2,10,70,85,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_name2,100,70,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_sex2,155,70,24,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_face2,185,70,45,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_college2,235,70,95,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_profession2,335,70,95,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_grade2,435,70,56,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_id3,10,90,85,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_name3,100,90,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_sex3,155,90,24,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_face3,185,90,45,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_college3,235,90,95,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_profession3,335,90,95,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_grade3,435,90,56,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_id4,10,110,85,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_name4,100,110,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_sex4,155,110,24,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_face4,185,110,45,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_college4,235,110,95,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_profession4,335,110,95,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_grade4,435,110,56,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_id5,10,130,85,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_name5,100,130,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_sex5,155,130,24,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_face5,185,130,45,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_college5,235,130,95,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_profession5,335,130,95,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_grade5,435,130,56,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_id6,10,150,85,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_name6,100,150,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_sex6,155,150,24,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_face6,185,150,45,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_college6,235,150,95,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_profession6,335,150,95,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_teacher_inquire_grade6,435,150,56,15,ES_CENTER | 
+                    ES_READONLY
+    GROUPBOX        "管理员信息查询",IDC_STATIC,5,12,492,178
+    EDITTEXT        EDIT_a_teacher_inquire_page,150,170,199,15,ES_CENTER | 
+                    ES_READONLY
+    PUSHBUTTON      "返回顶部",BUTTON_a_teacher_inquire_top,100,195,50,15
+    PUSHBUTTON      "上一页",BUTTON_a_teacher_inquire_prior,174,195,50,15
+    PUSHBUTTON      "下一页",BUTTON_a_teacher_inquire_next,251,195,49,15
+    PUSHBUTTON      "关闭",BUTTON_a_teacher_inquire_exit,325,195,50,15
+END
+
+IDD_a_teacher_modification DIALOG DISCARDABLE  0, 0, 496, 256
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "管理员账户信息修改——管理员端"
+FONT 10, "System"
+BEGIN
+    CTEXT           "请输入账号定位欲修改账号：",IDC_STATIC,15,25,105,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_teacher_modification_oldid,121,25,79,15,ES_CENTER
+    CTEXT           "账号",IDC_STATIC,15,45,35,15,SS_CENTERIMAGE
+    CTEXT           "姓名",IDC_STATIC,15,65,35,15,SS_CENTERIMAGE
+    CTEXT           "性别",IDC_STATIC,15,85,35,15,SS_CENTERIMAGE
+    CTEXT           "民族",IDC_STATIC,15,105,35,15,SS_CENTERIMAGE
+    CTEXT           "政治面貌",IDC_STATIC,15,125,35,15,SS_CENTERIMAGE
+    CTEXT           "出生日期",IDC_STATIC,15,145,35,15,SS_CENTERIMAGE
+    CTEXT           "入职日期",IDC_STATIC,15,165,35,15,SS_CENTERIMAGE
+    CTEXT           "所属学院",IDC_STATIC,15,185,35,15,SS_CENTERIMAGE
+    CTEXT           "所属部门",IDC_STATIC,15,205,35,15,SS_CENTERIMAGE
+    CTEXT           "职称",IDC_STATIC,15,225,35,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_teacher_modification_oldid1,55,45,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_teacher_modification_oldname,55,65,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_teacher_modification_oldsex,55,85,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_teacher_modification_oldnation,55,105,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_teacher_modification_oldface,55,125,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_teacher_modification_oldbirth,55,145,145,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_teacher_modification_oldtime,55,165,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_teacher_modification_oldcollege,55,185,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_teacher_modification_oldprofession,55,205,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_teacher_modification_oldgrade,55,225,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    CTEXT           "账号",IDC_STATIC,225,45,35,15,SS_CENTERIMAGE
+    CTEXT           "姓名",IDC_STATIC,225,65,35,15,SS_CENTERIMAGE
+    CTEXT           "性别",IDC_STATIC,225,85,35,15,SS_CENTERIMAGE
+    CTEXT           "民族",IDC_STATIC,225,105,35,15,SS_CENTERIMAGE
+    CTEXT           "政治面貌",IDC_STATIC,225,125,35,15,SS_CENTERIMAGE
+    CTEXT           "出生日期",IDC_STATIC,225,145,35,15,SS_CENTERIMAGE
+    CTEXT           "入职日期",IDC_STATIC,225,165,35,15,SS_CENTERIMAGE
+    CTEXT           "所属学院",IDC_STATIC,225,185,35,15,SS_CENTERIMAGE
+    CTEXT           "所属部门",IDC_STATIC,225,205,35,15,SS_CENTERIMAGE
+    CTEXT           "职称",IDC_STATIC,225,225,35,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_teacher_modification_newid,265,45,145,15,
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_teacher_modification_newname,265,65,145,15,
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_teacher_modification_newsex,265,85,145,15,
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_teacher_modification_newnation,265,105,145,15,
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_teacher_modification_newface,265,125,145,15,
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_teacher_modification_newbirth,265,145,145,15,
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_teacher_modification_newtime,265,165,145,15,
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_teacher_modification_newcollege,265,185,145,15,
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_teacher_modification_newprofession,265,205,145,15,
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_teacher_modification_newgrade,265,225,145,15,
+                    ES_AUTOHSCROLL
+    GROUPBOX        "源数据",IDC_STATIC,9,14,201,236
+    GROUPBOX        "新数据",IDC_STATIC,220,14,200,236
+    PUSHBUTTON      "定位修改",BUTTON_a_teacher_modification_location,430,45,
+                    45,15
+    PUSHBUTTON      "新老师",BUTTON_a_teacher_modification_add,430,65,45,15
+    PUSHBUTTON      "保存",BUTTON_a_teacher_modification_affirm,430,85,45,15
+    PUSHBUTTON      "删除数据",BUTTON_a_teacher_modification_delete,430,105,
+                    45,15
+    PUSHBUTTON      "关闭",BUTTON_a_teacher_modification_exit,430,125,45,15
+END
+
+IDD_a_student_inquire DIALOG DISCARDABLE  0, 0, 560, 215
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "管理员账户信息查询——管理员端"
+FONT 10, "System"
+BEGIN
+    CTEXT           "账号",IDC_STATIC,10,30,85,15,SS_CENTERIMAGE
+    CTEXT           "姓名",IDC_STATIC,100,30,50,15,SS_CENTERIMAGE
+    CTEXT           "性别",IDC_STATIC,155,30,24,15,SS_CENTERIMAGE
+    CTEXT           "政治面貌",IDC_STATIC,185,30,45,15,SS_CENTERIMAGE
+    CTEXT           "所属学院",IDC_STATIC,235,30,95,15,SS_CENTERIMAGE
+    CTEXT           "所属科目",IDC_STATIC,335,30,95,15,SS_CENTERIMAGE
+    CTEXT           "班级",IDC_STATIC,435,30,104,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_student_inquire_id1,10,50,85,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_name1,100,50,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_sex1,155,50,24,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_face1,185,50,45,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_college1,235,50,95,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_profession1,335,50,95,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_grade1,435,50,104,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_id2,10,70,85,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_name2,100,70,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_sex2,155,70,24,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_face2,185,70,45,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_college2,235,70,95,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_profession2,335,70,95,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_grade2,435,70,104,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_id3,10,90,85,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_name3,100,90,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_sex3,155,90,24,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_face3,185,90,45,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_college3,235,90,95,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_profession3,335,90,95,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_grade3,435,90,104,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_id4,10,110,85,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_name4,100,110,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_sex4,155,110,24,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_face4,185,110,45,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_college4,235,110,95,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_profession4,335,110,95,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_grade4,435,110,104,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_id5,10,130,85,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_name5,100,130,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_sex5,155,130,24,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_face5,185,130,45,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_college5,235,130,95,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_profession5,335,130,95,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_grade5,435,130,104,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_id6,10,150,85,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_name6,100,150,50,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_sex6,155,150,24,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_face6,185,150,45,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_college6,235,150,95,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_profession6,335,150,95,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_student_inquire_grade6,435,150,104,15,ES_CENTER | 
+                    ES_READONLY
+    GROUPBOX        "管理员信息查询",IDC_STATIC,6,12,543,183
+    EDITTEXT        EDIT_a_student_inquire_page,150,170,199,15,ES_CENTER | 
+                    ES_READONLY
+    PUSHBUTTON      "返回顶部",BUTTON_a_student_inquire_top,100,195,50,15
+    PUSHBUTTON      "上一页",BUTTON_a_student_inquire_prior,174,195,50,15
+    PUSHBUTTON      "下一页",BUTTON_a_student_inquire_next,251,195,49,15
+    PUSHBUTTON      "关闭",BUTTON_a_student_inquire_exit,325,195,50,15
+END
+
+IDD_a_student_modification DIALOG DISCARDABLE  0, 0, 496, 256
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "管理员账户信息修改——管理员端"
+FONT 10, "System"
+BEGIN
+    CTEXT           "请输入账号定位欲修改账号：",IDC_STATIC,15,25,105,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_student_modification_oldid,121,25,79,15,ES_CENTER
+    CTEXT           "账号",IDC_STATIC,15,45,35,15,SS_CENTERIMAGE
+    CTEXT           "姓名",IDC_STATIC,15,65,35,15,SS_CENTERIMAGE
+    CTEXT           "性别",IDC_STATIC,15,85,35,15,SS_CENTERIMAGE
+    CTEXT           "民族",IDC_STATIC,15,105,35,15,SS_CENTERIMAGE
+    CTEXT           "政治面貌",IDC_STATIC,15,125,35,15,SS_CENTERIMAGE
+    CTEXT           "出生日期",IDC_STATIC,15,145,35,15,SS_CENTERIMAGE
+    CTEXT           "入职日期",IDC_STATIC,15,165,35,15,SS_CENTERIMAGE
+    CTEXT           "所属学院",IDC_STATIC,15,185,35,15,SS_CENTERIMAGE
+    CTEXT           "所属部门",IDC_STATIC,15,205,35,15,SS_CENTERIMAGE
+    CTEXT           "班级",IDC_STATIC,15,225,35,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_student_modification_oldid1,55,45,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_student_modification_oldname,55,65,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_student_modification_oldsex,55,85,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_student_modification_oldnation,55,105,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_student_modification_oldface,55,125,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_student_modification_oldbirth,55,145,145,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_student_modification_oldtime,55,165,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_student_modification_oldcollege,55,185,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_student_modification_oldprofession,55,205,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_student_modification_oldgrade,55,225,145,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    CTEXT           "账号",IDC_STATIC,225,45,35,15,SS_CENTERIMAGE
+    CTEXT           "姓名",IDC_STATIC,225,65,35,15,SS_CENTERIMAGE
+    CTEXT           "性别",IDC_STATIC,225,85,35,15,SS_CENTERIMAGE
+    CTEXT           "民族",IDC_STATIC,225,105,35,15,SS_CENTERIMAGE
+    CTEXT           "政治面貌",IDC_STATIC,225,125,35,15,SS_CENTERIMAGE
+    CTEXT           "出生日期",IDC_STATIC,225,145,35,15,SS_CENTERIMAGE
+    CTEXT           "入职日期",IDC_STATIC,225,165,35,15,SS_CENTERIMAGE
+    CTEXT           "所属学院",IDC_STATIC,225,185,35,15,SS_CENTERIMAGE
+    CTEXT           "所属部门",IDC_STATIC,225,205,35,15,SS_CENTERIMAGE
+    CTEXT           "班级",IDC_STATIC,225,225,35,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_student_modification_newid,265,45,145,15,
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_student_modification_newname,265,65,145,15,
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_student_modification_newsex,265,85,145,15,
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_student_modification_newnation,265,105,145,15,
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_student_modification_newface,265,125,145,15,
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_student_modification_newbirth,265,145,145,15,
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_student_modification_newtime,265,165,145,15,
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_student_modification_newcollege,265,185,145,15,
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_student_modification_newprofession,265,205,145,15,
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_student_modification_newgrade,265,225,145,15,
+                    ES_AUTOHSCROLL
+    GROUPBOX        "源数据",IDC_STATIC,9,14,201,236
+    GROUPBOX        "新数据",IDC_STATIC,220,14,200,236
+    PUSHBUTTON      "定位修改",BUTTON_a_student_modification_location,430,45,
+                    45,15
+    PUSHBUTTON      "新同学",BUTTON_a_student_modification_add,430,65,45,15
+    PUSHBUTTON      "保存",BUTTON_a_student_modification_affirm,430,85,45,15
+    PUSHBUTTON      "删除数据",BUTTON_a_student_modification_delete,430,105,
+                    45,15
+    PUSHBUTTON      "关闭",BUTTON_a_student_modification_exit,430,125,45,15
+END
+
+IDD_a_score_inquire DIALOG DISCARDABLE  0, 0, 636, 200
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "全部成绩信息查询——管理员端"
+FONT 10, "System"
+BEGIN
+    CTEXT           "姓名",IDC_STATIC,14,15,61,15,SS_CENTERIMAGE
+    CTEXT           "学号",IDC_STATIC,80,15,80,15,SS_CENTERIMAGE
+    CTEXT           "学科",IDC_STATIC,354,15,89,15,SS_CENTERIMAGE
+    CTEXT           "班级",IDC_STATIC,164,15,116,15,SS_CENTERIMAGE
+    CTEXT           "卷面成绩",IDC_STATIC,449,15,40,15,SS_CENTERIMAGE
+    CTEXT           "平时成绩",IDC_STATIC,494,15,40,15,SS_CENTERIMAGE
+    CTEXT           "补考成绩",IDC_STATIC,539,15,40,15,SS_CENTERIMAGE
+    CTEXT           "总成绩",IDC_STATIC,584,15,35,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_score_inquire_name1,14,35,61,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_id1,80,35,80,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_subject1,354,35,89,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_grade1,164,35,116,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_paper_score1,449,35,40,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_usual_score1,494,35,40,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_makeup_score1,539,35,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_score1,584,35,35,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_name2,14,55,61,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_id2,80,55,80,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_subject2,354,55,89,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_grade2,164,55,116,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_paper_score2,449,55,40,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_usual_score2,494,55,40,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_makeup_score2,539,55,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_score2,584,55,35,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_name3,14,75,61,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_id3,80,75,80,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_subject3,354,75,89,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_grade3,164,75,116,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_paper_score3,449,75,40,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_usual_score3,494,75,40,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_makeup_score3,539,75,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_score3,584,75,35,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_name4,14,95,61,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_id4,80,95,80,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_subject4,354,95,89,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_grade4,164,95,116,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_paper_score4,449,95,40,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_usual_score4,494,95,40,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_makeup_score4,539,95,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_score4,584,95,35,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_name5,14,115,61,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_id5,80,115,80,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_subject5,354,115,89,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_grade5,164,115,116,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_paper_score5,449,115,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_usual_score5,494,115,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_makeup_score5,539,115,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_score5,584,115,35,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_name6,14,135,61,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_id6,80,135,80,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_subject6,354,135,89,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_grade6,164,135,116,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_paper_score6,449,135,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_usual_score6,494,135,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_makeup_score6,539,135,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_score6,584,135,35,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_page,14,155,605,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "成绩数据",IDC_STATIC,9,5,616,170
+    PUSHBUTTON      "返回顶部",BUTTON_a_score_inquire_top,100,182,50,12
+    PUSHBUTTON      "上一页",BUTTON_a_score_inquire_prior,200,182,50,12
+    PUSHBUTTON      "下一页",BUTTON_a_score_inquire_next,300,182,50,12
+    PUSHBUTTON      "关闭",BUTTON_a_score_inquire_exit,400,182,50,12
+    CTEXT           "学期",IDC_STATIC,285,15,65,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_score_inquire_term1,285,35,65,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_term2,285,55,65,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_term3,285,75,65,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_term4,285,95,65,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_term5,285,115,65,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_inquire_term6,285,135,65,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_a_score_modification DIALOG DISCARDABLE  0, 0, 529, 283
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "修改成绩数据——管理员端"
+FONT 10, "System"
+BEGIN
+    EDITTEXT        EDIT_a_score_modification_oldid,75,50,150,15,ES_CENTER
+    EDITTEXT        EDIT_a_score_modification_oldterm,75,150,150,15,
+                    ES_CENTER
+    EDITTEXT        EDIT_a_score_modification_oldsubject,75,170,150,15,
+                    ES_CENTER
+    PUSHBUTTON      "定位数据",BUTTON_a_score_modification_location,470,50,
+                    45,15
+    CTEXT           "请输入以下信息定位欲修改信息：",IDC_STATIC,10,30,215,15,
+                    SS_CENTERIMAGE
+    CTEXT           "账号",IDC_STATIC,10,50,65,15,SS_CENTERIMAGE
+    CTEXT           "姓名",IDC_STATIC,10,70,65,15,SS_CENTERIMAGE
+    CTEXT           "学院",IDC_STATIC,10,90,65,15,SS_CENTERIMAGE
+    CTEXT           "专业",IDC_STATIC,10,110,65,15,SS_CENTERIMAGE
+    CTEXT           "班级",IDC_STATIC,10,130,65,15,SS_CENTERIMAGE
+    CTEXT           "学期",IDC_STATIC,10,150,65,15,SS_CENTERIMAGE
+    CTEXT           "科目",IDC_STATIC,10,170,65,15,SS_CENTERIMAGE
+    CTEXT           "卷面成绩",IDC_STATIC,10,190,65,15,SS_CENTERIMAGE
+    CTEXT           "平时成绩",IDC_STATIC,10,211,65,15,SS_CENTERIMAGE
+    CTEXT           "补考成绩",IDC_STATIC,10,230,65,15,SS_CENTERIMAGE
+    CTEXT           "总成绩",IDC_STATIC,10,250,65,15,SS_CENTERIMAGE
+    CTEXT           "账号",IDC_STATIC,240,50,65,15,SS_CENTERIMAGE
+    CTEXT           "姓名",IDC_STATIC,240,70,65,15,SS_CENTERIMAGE
+    CTEXT           "学院",IDC_STATIC,240,90,65,15,SS_CENTERIMAGE
+    CTEXT           "专业",IDC_STATIC,240,110,65,15,SS_CENTERIMAGE
+    CTEXT           "班级",IDC_STATIC,240,130,65,15,SS_CENTERIMAGE
+    CTEXT           "学期",IDC_STATIC,240,150,65,15,SS_CENTERIMAGE
+    CTEXT           "科目",IDC_STATIC,240,170,65,15,SS_CENTERIMAGE
+    CTEXT           "卷面成绩",IDC_STATIC,240,190,65,15,SS_CENTERIMAGE
+    CTEXT           "平时成绩",IDC_STATIC,240,211,65,15,SS_CENTERIMAGE
+    CTEXT           "补考成绩",IDC_STATIC,240,230,65,15,SS_CENTERIMAGE
+    CTEXT           "总成绩",IDC_STATIC,240,250,65,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_score_modification_oldname,75,70,150,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_modification_oldcollege,75,90,150,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_score_modification_oldprofession,75,110,150,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_score_modification_oldgrade,75,130,150,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_score_modification_oldpaper_score,75,190,150,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_score_modification_oldusual_score,75,211,150,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_score_modification_oldmakeup_score,75,230,150,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_score_modification_oldscore,75,250,150,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_score_modification_newid,305,50,150,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_modification_newname,305,70,150,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_score_modification_newcollege,305,90,150,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_score_modification_newprofession,305,110,150,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_score_modification_newgrade,305,130,150,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_score_modification_newterm,305,150,150,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_score_modification_newsubject,305,170,150,15,
+                    ES_CENTER | ES_READONLY
+    EDITTEXT        EDIT_a_score_modification_newpaper_score,305,190,150,15,
+                    ES_CENTER
+    EDITTEXT        EDIT_a_score_modification_newusual_score,305,211,150,15,
+                    ES_CENTER
+    EDITTEXT        EDIT_a_score_modification_newmakeup_score,305,230,150,15,
+                    ES_CENTER
+    EDITTEXT        EDIT_a_score_modification_newscore,305,250,150,15,
+                    ES_CENTER | ES_READONLY
+    GROUPBOX        "源数据",IDC_STATIC,10,5,220,270
+    GROUPBOX        "新数据",IDC_STATIC,235,5,225,269
+    PUSHBUTTON      "上一条",BUTTON_a_score_modification_prior,470,70,45,15
+    PUSHBUTTON      "下一条",BUTTON_a_score_modification_next,470,90,45,15
+    PUSHBUTTON      "确认修改",BUTTON_a_score_modification_affirm,470,130,45,
+                    15
+    PUSHBUTTON      "删除数据",BUTTON_a_score_modification_delete,470,150,45,
+                    15
+    PUSHBUTTON      "关闭",BUTTON_a_score_modification_exit,470,170,45,15
+END
+
+IDD_a_score_self_inquire DIALOG DISCARDABLE  0, 0, 636, 234
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "个人成绩信息查询——管理员端"
+FONT 10, "System"
+BEGIN
+    EDITTEXT        EDIT_a_score_self_inquire_id,170,5,80,15,ES_CENTER
+    PUSHBUTTON      "开始查找",BUTTON_a_score_self_inquire_top,100,203,50,12
+    CTEXT           "姓名",IDC_STATIC,14,36,61,15,SS_CENTERIMAGE
+    CTEXT           "学号",IDC_STATIC,80,36,80,15,SS_CENTERIMAGE
+    CTEXT           "学科",IDC_STATIC,354,36,89,15,SS_CENTERIMAGE
+    CTEXT           "班级",IDC_STATIC,164,36,116,15,SS_CENTERIMAGE
+    CTEXT           "卷面成绩",IDC_STATIC,449,36,40,15,SS_CENTERIMAGE
+    CTEXT           "平时成绩",IDC_STATIC,494,36,40,15,SS_CENTERIMAGE
+    CTEXT           "补考成绩",IDC_STATIC,539,36,40,15,SS_CENTERIMAGE
+    CTEXT           "总成绩",IDC_STATIC,584,36,35,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_score_self_inquire_name1,14,55,61,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_id1,80,55,80,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_subject1,354,55,89,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_grade1,164,55,116,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_paper_score1,449,55,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_usual_score1,494,55,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_makeup_score1,539,55,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_score1,584,55,35,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_page,14,176,605,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "成绩数据",IDC_STATIC,9,26,616,170
+    PUSHBUTTON      "上一页",BUTTON_a_score_self_inquire_prior,200,203,50,12
+    PUSHBUTTON      "下一页",BUTTON_a_score_self_inquire_next,300,203,50,12
+    PUSHBUTTON      "关闭",BUTTON_a_score_self_inquire_exit,400,203,50,12
+    CTEXT           "学期",IDC_STATIC,285,36,65,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_score_self_inquire_term1,285,55,65,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    CTEXT           "请输入学生成绩查找条件：",IDC_STATIC,10,5,100,15,
+                    SS_CENTERIMAGE
+    CTEXT           "学号",IDC_STATIC,115,5,49,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_score_self_inquire_name2,14,74,61,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_id2,80,74,80,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_subject2,354,74,89,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_grade2,164,74,116,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_paper_score2,449,74,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_usual_score2,494,74,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_makeup_score2,539,74,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_score2,584,74,35,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_term2,285,74,65,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_name3,14,95,61,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_id3,80,95,80,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_subject3,354,95,89,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_grade3,164,95,116,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_paper_score3,449,95,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_usual_score3,494,95,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_makeup_score3,539,95,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_score3,584,95,35,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_term3,285,95,65,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_name4,14,116,61,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_id4,80,116,80,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_subject4,354,116,89,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_grade4,164,116,116,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_paper_score4,449,116,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_usual_score4,494,116,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_makeup_score4,539,116,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_score4,584,116,35,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_term4,285,116,65,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_name5,14,135,61,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_id5,80,135,80,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_subject5,354,135,89,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_grade5,164,135,116,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_paper_score5,449,135,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_usual_score5,494,135,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_makeup_score5,539,135,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_score5,584,135,35,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_term5,285,135,65,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_name6,14,155,61,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_id6,80,155,80,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_subject6,354,155,89,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_grade6,164,155,116,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_paper_score6,449,155,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_usual_score6,494,155,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_makeup_score6,539,155,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_score6,584,155,35,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_self_inquire_term6,285,155,65,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_a_score_term_inquire DIALOG DISCARDABLE  0, 0, 636, 234
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "个人成绩信息查询——管理员端"
+FONT 10, "System"
+BEGIN
+    EDITTEXT        EDIT_a_score_term_inquire_grade,170,5,130,15,ES_CENTER
+    PUSHBUTTON      "开始查找",BUTTON_a_score_term_inquire_top,100,203,50,12
+    CTEXT           "姓名",IDC_STATIC,14,36,61,15,SS_CENTERIMAGE
+    CTEXT           "学号",IDC_STATIC,80,36,80,15,SS_CENTERIMAGE
+    CTEXT           "学科",IDC_STATIC,354,36,89,15,SS_CENTERIMAGE
+    CTEXT           "班级",IDC_STATIC,164,36,116,15,SS_CENTERIMAGE
+    CTEXT           "卷面成绩",IDC_STATIC,449,36,40,15,SS_CENTERIMAGE
+    CTEXT           "平时成绩",IDC_STATIC,494,36,40,15,SS_CENTERIMAGE
+    CTEXT           "补考成绩",IDC_STATIC,539,36,40,15,SS_CENTERIMAGE
+    CTEXT           "总成绩",IDC_STATIC,584,36,35,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_score_term_inquire_name1,14,55,61,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_id1,80,55,80,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_subject1,354,55,89,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_grade1,164,55,116,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_paper_score1,449,55,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_usual_score1,494,55,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_makeup_score1,539,55,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_score1,584,55,35,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_page,14,176,605,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "成绩数据",IDC_STATIC,9,26,616,170
+    PUSHBUTTON      "上一页",BUTTON_a_score_term_inquire_prior,200,203,50,12
+    PUSHBUTTON      "下一页",BUTTON_a_score_term_inquire_next,300,203,50,12
+    PUSHBUTTON      "关闭",BUTTON_a_score_term_inquire_exit,400,203,50,12
+    CTEXT           "学期",IDC_STATIC,285,36,65,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_score_term_inquire_term1,285,55,65,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    CTEXT           "请输入学生成绩查找条件：",IDC_STATIC,10,5,100,15,
+                    SS_CENTERIMAGE
+    CTEXT           "班级",IDC_STATIC,115,5,49,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_score_term_inquire_name2,14,74,61,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_id2,80,74,80,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_subject2,354,74,89,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_grade2,164,74,116,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_paper_score2,449,74,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_usual_score2,494,74,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_makeup_score2,539,74,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_score2,584,74,35,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_term2,285,74,65,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_name3,14,95,61,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_id3,80,95,80,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_subject3,354,95,89,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_grade3,164,95,116,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_paper_score3,449,95,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_usual_score3,494,95,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_makeup_score3,539,95,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_score3,584,95,35,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_term3,285,95,65,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_name4,14,116,61,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_id4,80,116,80,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_subject4,354,116,89,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_grade4,164,116,116,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_paper_score4,449,116,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_usual_score4,494,116,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_makeup_score4,539,116,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_score4,584,116,35,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_term4,285,116,65,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_name5,14,135,61,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_id5,80,135,80,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_subject5,354,135,89,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_grade5,164,135,116,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_paper_score5,449,135,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_usual_score5,494,135,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_makeup_score5,539,135,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_score5,584,135,35,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_term5,285,135,65,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_name6,14,155,61,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_id6,80,155,80,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_subject6,354,155,89,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_grade6,164,155,116,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_paper_score6,449,155,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_usual_score6,494,155,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_makeup_score6,539,155,40,15,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_score6,584,155,35,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        EDIT_a_score_term_inquire_term6,285,155,65,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_a_score_enter DIALOG DISCARDABLE  0, 0, 530, 206
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "成绩信息录入——管理员端"
+FONT 10, "System"
+BEGIN
+    CTEXT           "请输入录入学科、班级以及学期：",IDC_STATIC,7,10,123,15,
+                    SS_CENTERIMAGE
+    CTEXT           "班级",IDC_STATIC,243,10,34,15,SS_CENTERIMAGE
+    CTEXT           "学期",IDC_STATIC,403,10,20,15,SS_CENTERIMAGE
+    CTEXT           "姓名",IDC_STATIC,11,30,57,15,SS_CENTERIMAGE
+    CTEXT           "学科",IDC_STATIC,132,10,19,15,SS_CENTERIMAGE
+    CTEXT           "学号",IDC_STATIC,75,30,120,15,SS_CENTERIMAGE
+    CTEXT           "卷面成绩",IDC_STATIC,200,30,50,15,SS_CENTERIMAGE
+    CTEXT           "平时成绩",IDC_STATIC,255,30,50,15,SS_CENTERIMAGE
+    CTEXT           "补考成绩",IDC_STATIC,310,30,50,15,SS_CENTERIMAGE
+    CTEXT           "总成绩",IDC_STATIC,364,30,51,15,SS_CENTERIMAGE
+    PUSHBUTTON      "开始录入",BUTTON_a_score_enter_location,434,50,51,15
+    PUSHBUTTON      "上一页",BUTTON_a_score_enter_prior,434,70,51,15
+    PUSHBUTTON      "下一页",BUTTON_a_score_enter_next,434,90,51,15
+    PUSHBUTTON      "保存信息",BUTTON_a_score_enter_affirm,434,110,51,15
+    PUSHBUTTON      "关闭",BUTTON_a_score_enter_exit,434,130,51,15
+    EDITTEXT        EDIT_a_score_enter_name1,11,50,57,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_enter_id1,75,50,120,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_enter_paper_score1,200,50,50,15,ES_CENTER | 
+                    ES_NUMBER
+    EDITTEXT        EDIT_a_score_enter_usual_score1,255,50,50,15,ES_CENTER | 
+                    ES_NUMBER
+    EDITTEXT        EDIT_a_score_enter_makeup_score1,310,50,50,15,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_score_enter_score1,364,50,51,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    COMBOBOX        EDIT_a_score_enter_subject,154,10,89,55,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        EDIT_a_score_enter_grade,270,10,128,55,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        EDIT_a_score_enter_term,426,10,89,55,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        EDIT_a_score_enter_page,11,170,404,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_enter_name2,11,70,57,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_enter_id2,75,70,120,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_enter_paper_score2,200,70,50,15,ES_CENTER | 
+                    ES_NUMBER
+    EDITTEXT        EDIT_a_score_enter_usual_score2,255,70,50,15,ES_CENTER | 
+                    ES_NUMBER
+    EDITTEXT        EDIT_a_score_enter_makeup_score2,310,70,50,15,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_score_enter_score2,364,70,51,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    EDITTEXT        EDIT_a_score_enter_name3,11,90,57,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_enter_id3,75,90,120,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_enter_paper_score3,200,90,50,15,ES_CENTER | 
+                    ES_NUMBER
+    EDITTEXT        EDIT_a_score_enter_usual_score3,255,90,50,15,ES_CENTER | 
+                    ES_NUMBER
+    EDITTEXT        EDIT_a_score_enter_makeup_score3,310,90,50,15,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_score_enter_score3,364,90,51,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    EDITTEXT        EDIT_a_score_enter_name4,11,110,57,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_enter_id4,75,110,120,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_enter_paper_score4,200,110,50,15,ES_CENTER | 
+                    ES_NUMBER
+    EDITTEXT        EDIT_a_score_enter_usual_score4,255,110,50,15,ES_CENTER | 
+                    ES_NUMBER
+    EDITTEXT        EDIT_a_score_enter_makeup_score4,310,110,50,15,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_score_enter_score4,364,110,51,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    EDITTEXT        EDIT_a_score_enter_name5,11,130,57,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_enter_id5,75,130,120,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_enter_paper_score5,200,130,50,15,ES_CENTER | 
+                    ES_NUMBER
+    EDITTEXT        EDIT_a_score_enter_usual_score5,255,130,50,15,ES_CENTER | 
+                    ES_NUMBER
+    EDITTEXT        EDIT_a_score_enter_makeup_score5,310,130,50,15,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_score_enter_score5,364,130,51,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    EDITTEXT        EDIT_a_score_enter_name6,11,150,57,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_enter_id6,75,150,120,15,ES_CENTER | 
+                    ES_READONLY
+    EDITTEXT        EDIT_a_score_enter_paper_score6,200,150,50,15,ES_CENTER | 
+                    ES_NUMBER
+    EDITTEXT        EDIT_a_score_enter_usual_score6,255,150,50,15,ES_CENTER | 
+                    ES_NUMBER
+    EDITTEXT        EDIT_a_score_enter_makeup_score6,310,150,50,15,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        EDIT_a_score_enter_score6,364,150,51,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+END
+
+IDD_a_score_analyse_average DIALOG DISCARDABLE  0, 0, 187, 94
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "班级均分查询——管理员端"
+FONT 10, "System"
+BEGIN
+    COMBOBOX        EDIT_a_score_analyse_average_gread,7,35,107,45,
+                    CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "请选择班级统计均分：",IDC_STATIC,16,15,90,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_score_analyse_average_score,121,36,52,12,
+                    ES_CENTER | ES_READONLY
+    PUSHBUTTON      "查询",BUTTON_a_score_analyse_average_enter,25,65,50,14
+    PUSHBUTTON      "关闭",BUTTON_a_score_analyse_average_exit,97,65,50,14
+END
+
+IDD_a_score_analyse_sum DIALOG DISCARDABLE  0, 0, 187, 94
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "班级总分查询——管理员端"
+FONT 10, "System"
+BEGIN
+    COMBOBOX        EDIT_a_score_analyse_sum_gread,7,35,100,45,
+                    CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "请选择班级统计总分：",IDC_STATIC,16,15,90,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        EDIT_a_score_analyse_sum_score,119,35,52,12,ES_CENTER | 
+                    ES_READONLY
+    PUSHBUTTON      "查询",BUTTON_a_score_analyse_sum_enter,25,65,50,14
+    PUSHBUTTON      "关闭",BUTTON_a_score_analyse_sum_exit,97,65,50,14
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""resource.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_LOADING, DIALOG
+    BEGIN
+        RIGHTMARGIN, 193
+        VERTGUIDE, 50
+        VERTGUIDE, 94
+        VERTGUIDE, 150
+        HORZGUIDE, 87
+        HORZGUIDE, 102
+    END
+
+    IDD_a_account_inquire, DIALOG
+    BEGIN
+        VERTGUIDE, 100
+        VERTGUIDE, 150
+        VERTGUIDE, 174
+        VERTGUIDE, 224
+        VERTGUIDE, 251
+        VERTGUIDE, 300
+        VERTGUIDE, 325
+        VERTGUIDE, 375
+        HORZGUIDE, 195
+        HORZGUIDE, 210
+    END
+
+    IDD_a_account_modification, DIALOG
+    BEGIN
+        VERTGUIDE, 9
+        VERTGUIDE, 15
+        VERTGUIDE, 50
+        VERTGUIDE, 55
+        VERTGUIDE, 200
+        VERTGUIDE, 210
+        VERTGUIDE, 220
+        VERTGUIDE, 225
+        VERTGUIDE, 266
+        VERTGUIDE, 410
+        VERTGUIDE, 420
+        VERTGUIDE, 430
+        VERTGUIDE, 475
+        HORZGUIDE, 5
+        HORZGUIDE, 14
+        HORZGUIDE, 20
+        HORZGUIDE, 25
+        HORZGUIDE, 40
+        HORZGUIDE, 45
+        HORZGUIDE, 60
+        HORZGUIDE, 65
+        HORZGUIDE, 80
+        HORZGUIDE, 85
+        HORZGUIDE, 100
+        HORZGUIDE, 105
+        HORZGUIDE, 120
+        HORZGUIDE, 125
+        HORZGUIDE, 140
+        HORZGUIDE, 145
+        HORZGUIDE, 160
+        HORZGUIDE, 165
+        HORZGUIDE, 180
+        HORZGUIDE, 185
+        HORZGUIDE, 200
+        HORZGUIDE, 205
+        HORZGUIDE, 220
+        HORZGUIDE, 225
+        HORZGUIDE, 240
+        HORZGUIDE, 250
+    END
+
+    IDD_a_college_inquire, DIALOG
+    BEGIN
+        VERTGUIDE, 45
+        VERTGUIDE, 95
+        VERTGUIDE, 105
+        VERTGUIDE, 245
+        VERTGUIDE, 250
+        VERTGUIDE, 255
+        VERTGUIDE, 300
+        HORZGUIDE, 15
+        HORZGUIDE, 30
+        HORZGUIDE, 35
+        HORZGUIDE, 50
+        HORZGUIDE, 55
+        HORZGUIDE, 70
+        HORZGUIDE, 75
+        HORZGUIDE, 90
+        HORZGUIDE, 95
+        HORZGUIDE, 110
+        HORZGUIDE, 115
+        HORZGUIDE, 130
+        HORZGUIDE, 135
+        HORZGUIDE, 150
+        HORZGUIDE, 155
+        HORZGUIDE, 170
+    END
+
+    IDD_a_self_check, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 295
+        VERTGUIDE, 70
+        VERTGUIDE, 118
+        VERTGUIDE, 200
+        VERTGUIDE, 235
+        VERTGUIDE, 285
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 181
+        HORZGUIDE, 21
+        HORZGUIDE, 35
+        HORZGUIDE, 50
+        HORZGUIDE, 65
+        HORZGUIDE, 80
+        HORZGUIDE, 95
+        HORZGUIDE, 110
+        HORZGUIDE, 125
+        HORZGUIDE, 140
+        HORZGUIDE, 155
+        HORZGUIDE, 170
+    END
+
+    IDD_a_self_password, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 162
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+        HORZGUIDE, 11
+        HORZGUIDE, 26
+    END
+
+    IDD_a_college_modification, DIALOG
+    BEGIN
+        VERTGUIDE, 20
+        VERTGUIDE, 25
+        VERTGUIDE, 60
+        VERTGUIDE, 65
+        VERTGUIDE, 199
+        VERTGUIDE, 212
+        VERTGUIDE, 231
+        VERTGUIDE, 271
+        HORZGUIDE, 10
+        HORZGUIDE, 25
+        HORZGUIDE, 30
+        HORZGUIDE, 45
+        HORZGUIDE, 50
+        HORZGUIDE, 65
+        HORZGUIDE, 70
+        HORZGUIDE, 85
+        HORZGUIDE, 90
+        HORZGUIDE, 105
+        HORZGUIDE, 110
+        HORZGUIDE, 125
+        HORZGUIDE, 130
+        HORZGUIDE, 145
+        HORZGUIDE, 150
+        HORZGUIDE, 165
+    END
+
+    IDD_a_profession_inquire, DIALOG
+    BEGIN
+        VERTGUIDE, 50
+        VERTGUIDE, 100
+        VERTGUIDE, 125
+        VERTGUIDE, 175
+        VERTGUIDE, 200
+        VERTGUIDE, 250
+        VERTGUIDE, 275
+        VERTGUIDE, 325
+        HORZGUIDE, 36
+        HORZGUIDE, 52
+        HORZGUIDE, 191
+        HORZGUIDE, 207
+    END
+
+    IDD_a_profession_modification, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 427
+        VERTGUIDE, 25
+        VERTGUIDE, 59
+        VERTGUIDE, 75
+        VERTGUIDE, 225
+        VERTGUIDE, 249
+        VERTGUIDE, 350
+        VERTGUIDE, 360
+        VERTGUIDE, 369
+        VERTGUIDE, 416
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 174
+        HORZGUIDE, 10
+        HORZGUIDE, 25
+        HORZGUIDE, 30
+        HORZGUIDE, 45
+        HORZGUIDE, 50
+        HORZGUIDE, 65
+        HORZGUIDE, 70
+        HORZGUIDE, 85
+        HORZGUIDE, 90
+        HORZGUIDE, 105
+        HORZGUIDE, 110
+        HORZGUIDE, 125
+        HORZGUIDE, 130
+        HORZGUIDE, 145
+        HORZGUIDE, 150
+        HORZGUIDE, 165
+        HORZGUIDE, 170
+    END
+
+    IDD_a_course_inquire, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 359
+        VERTGUIDE, 25
+        VERTGUIDE, 75
+        VERTGUIDE, 100
+        VERTGUIDE, 275
+        VERTGUIDE, 280
+        VERTGUIDE, 291
+        VERTGUIDE, 341
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 186
+        HORZGUIDE, 20
+        HORZGUIDE, 35
+        HORZGUIDE, 40
+        HORZGUIDE, 55
+        HORZGUIDE, 60
+        HORZGUIDE, 75
+        HORZGUIDE, 80
+        HORZGUIDE, 95
+        HORZGUIDE, 100
+        HORZGUIDE, 115
+        HORZGUIDE, 120
+        HORZGUIDE, 135
+        HORZGUIDE, 140
+        HORZGUIDE, 155
+        HORZGUIDE, 160
+        HORZGUIDE, 175
+        HORZGUIDE, 180
+    END
+
+    IDD_a_course_modification, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 348
+        VERTGUIDE, 15
+        VERTGUIDE, 25
+        VERTGUIDE, 60
+        VERTGUIDE, 75
+        VERTGUIDE, 275
+        VERTGUIDE, 285
+        VERTGUIDE, 295
+        VERTGUIDE, 335
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 177
+        HORZGUIDE, 25
+        HORZGUIDE, 30
+        HORZGUIDE, 45
+        HORZGUIDE, 50
+        HORZGUIDE, 65
+        HORZGUIDE, 70
+        HORZGUIDE, 85
+        HORZGUIDE, 90
+        HORZGUIDE, 105
+        HORZGUIDE, 110
+        HORZGUIDE, 125
+        HORZGUIDE, 130
+        HORZGUIDE, 145
+        HORZGUIDE, 150
+        HORZGUIDE, 165
+    END
+
+    IDD_a_class_inquire, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 559
+        VERTGUIDE, 16
+        VERTGUIDE, 50
+        VERTGUIDE, 60
+        VERTGUIDE, 250
+        VERTGUIDE, 259
+        VERTGUIDE, 395
+        VERTGUIDE, 400
+        VERTGUIDE, 499
+        VERTGUIDE, 506
+        VERTGUIDE, 550
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 185
+        HORZGUIDE, 25
+        HORZGUIDE, 40
+        HORZGUIDE, 45
+        HORZGUIDE, 60
+        HORZGUIDE, 65
+        HORZGUIDE, 80
+        HORZGUIDE, 84
+        HORZGUIDE, 100
+        HORZGUIDE, 105
+        HORZGUIDE, 120
+        HORZGUIDE, 125
+        HORZGUIDE, 140
+        HORZGUIDE, 145
+        HORZGUIDE, 160
+        HORZGUIDE, 165
+        HORZGUIDE, 180
+    END
+
+    IDD_a_class_modification, DIALOG
+    BEGIN
+        VERTGUIDE, 50
+        VERTGUIDE, 100
+        VERTGUIDE, 150
+        VERTGUIDE, 199
+        VERTGUIDE, 250
+        VERTGUIDE, 301
+        VERTGUIDE, 350
+        VERTGUIDE, 400
+        VERTGUIDE, 450
+        VERTGUIDE, 499
+        HORZGUIDE, 180
+        HORZGUIDE, 195
+    END
+
+    IDD_a_teacher_inquire, DIALOG
+    BEGIN
+        VERTGUIDE, 100
+        VERTGUIDE, 150
+        VERTGUIDE, 174
+        VERTGUIDE, 224
+        VERTGUIDE, 251
+        VERTGUIDE, 300
+        VERTGUIDE, 325
+        VERTGUIDE, 375
+        HORZGUIDE, 195
+        HORZGUIDE, 210
+    END
+
+    IDD_a_teacher_modification, DIALOG
+    BEGIN
+        VERTGUIDE, 9
+        VERTGUIDE, 15
+        VERTGUIDE, 50
+        VERTGUIDE, 55
+        VERTGUIDE, 200
+        VERTGUIDE, 210
+        VERTGUIDE, 220
+        VERTGUIDE, 225
+        VERTGUIDE, 410
+        VERTGUIDE, 420
+        VERTGUIDE, 430
+        VERTGUIDE, 475
+        HORZGUIDE, 5
+        HORZGUIDE, 14
+        HORZGUIDE, 20
+        HORZGUIDE, 25
+        HORZGUIDE, 40
+        HORZGUIDE, 45
+        HORZGUIDE, 60
+        HORZGUIDE, 65
+        HORZGUIDE, 80
+        HORZGUIDE, 85
+        HORZGUIDE, 100
+        HORZGUIDE, 105
+        HORZGUIDE, 120
+        HORZGUIDE, 125
+        HORZGUIDE, 140
+        HORZGUIDE, 145
+        HORZGUIDE, 160
+        HORZGUIDE, 165
+        HORZGUIDE, 180
+        HORZGUIDE, 185
+        HORZGUIDE, 200
+        HORZGUIDE, 205
+        HORZGUIDE, 220
+        HORZGUIDE, 225
+        HORZGUIDE, 240
+        HORZGUIDE, 250
+    END
+
+    IDD_a_student_inquire, DIALOG
+    BEGIN
+        RIGHTMARGIN, 548
+        VERTGUIDE, 100
+        VERTGUIDE, 150
+        VERTGUIDE, 174
+        VERTGUIDE, 224
+        VERTGUIDE, 251
+        VERTGUIDE, 300
+        VERTGUIDE, 325
+        VERTGUIDE, 375
+        VERTGUIDE, 435
+        VERTGUIDE, 539
+        HORZGUIDE, 195
+        HORZGUIDE, 210
+    END
+
+    IDD_a_student_modification, DIALOG
+    BEGIN
+        VERTGUIDE, 9
+        VERTGUIDE, 15
+        VERTGUIDE, 50
+        VERTGUIDE, 55
+        VERTGUIDE, 200
+        VERTGUIDE, 210
+        VERTGUIDE, 220
+        VERTGUIDE, 225
+        VERTGUIDE, 410
+        VERTGUIDE, 420
+        VERTGUIDE, 430
+        VERTGUIDE, 475
+        HORZGUIDE, 5
+        HORZGUIDE, 14
+        HORZGUIDE, 20
+        HORZGUIDE, 25
+        HORZGUIDE, 40
+        HORZGUIDE, 45
+        HORZGUIDE, 60
+        HORZGUIDE, 65
+        HORZGUIDE, 80
+        HORZGUIDE, 85
+        HORZGUIDE, 100
+        HORZGUIDE, 105
+        HORZGUIDE, 120
+        HORZGUIDE, 125
+        HORZGUIDE, 140
+        HORZGUIDE, 145
+        HORZGUIDE, 160
+        HORZGUIDE, 165
+        HORZGUIDE, 180
+        HORZGUIDE, 185
+        HORZGUIDE, 200
+        HORZGUIDE, 205
+        HORZGUIDE, 220
+        HORZGUIDE, 225
+        HORZGUIDE, 240
+        HORZGUIDE, 250
+    END
+
+    IDD_a_score_inquire, DIALOG
+    BEGIN
+        VERTGUIDE, 50
+        VERTGUIDE, 100
+        VERTGUIDE, 150
+        VERTGUIDE, 160
+        VERTGUIDE, 164
+        VERTGUIDE, 200
+        VERTGUIDE, 250
+        VERTGUIDE, 280
+        VERTGUIDE, 285
+        VERTGUIDE, 300
+        VERTGUIDE, 350
+        VERTGUIDE, 400
+        VERTGUIDE, 450
+        VERTGUIDE, 500
+        VERTGUIDE, 550
+        VERTGUIDE, 619
+        VERTGUIDE, 625
+        HORZGUIDE, 15
+        HORZGUIDE, 30
+        HORZGUIDE, 35
+        HORZGUIDE, 50
+        HORZGUIDE, 55
+        HORZGUIDE, 70
+        HORZGUIDE, 75
+        HORZGUIDE, 90
+        HORZGUIDE, 95
+        HORZGUIDE, 110
+        HORZGUIDE, 115
+        HORZGUIDE, 130
+        HORZGUIDE, 135
+        HORZGUIDE, 150
+        HORZGUIDE, 155
+        HORZGUIDE, 182
+        HORZGUIDE, 194
+    END
+
+    IDD_a_score_modification, DIALOG
+    BEGIN
+        VERTGUIDE, 10
+        VERTGUIDE, 75
+        VERTGUIDE, 225
+        VERTGUIDE, 230
+        VERTGUIDE, 235
+        VERTGUIDE, 240
+        VERTGUIDE, 305
+        VERTGUIDE, 455
+        VERTGUIDE, 460
+        VERTGUIDE, 465
+        VERTGUIDE, 470
+        VERTGUIDE, 515
+        HORZGUIDE, 5
+        HORZGUIDE, 20
+        HORZGUIDE, 25
+        HORZGUIDE, 30
+        HORZGUIDE, 45
+        HORZGUIDE, 50
+        HORZGUIDE, 65
+        HORZGUIDE, 70
+        HORZGUIDE, 85
+        HORZGUIDE, 90
+        HORZGUIDE, 105
+        HORZGUIDE, 110
+        HORZGUIDE, 125
+        HORZGUIDE, 130
+        HORZGUIDE, 145
+        HORZGUIDE, 150
+        HORZGUIDE, 165
+        HORZGUIDE, 170
+        HORZGUIDE, 185
+        HORZGUIDE, 190
+        HORZGUIDE, 205
+        HORZGUIDE, 211
+        HORZGUIDE, 225
+        HORZGUIDE, 230
+        HORZGUIDE, 245
+        HORZGUIDE, 250
+        HORZGUIDE, 265
+        HORZGUIDE, 274
+    END
+
+    IDD_a_score_term_inquire, DIALOG
+    BEGIN
+        VERTGUIDE, 14
+        HORZGUIDE, 74
+        HORZGUIDE, 89
+        HORZGUIDE, 95
+        HORZGUIDE, 110
+        HORZGUIDE, 116
+        HORZGUIDE, 131
+        HORZGUIDE, 135
+        HORZGUIDE, 150
+        HORZGUIDE, 155
+        HORZGUIDE, 170
+        HORZGUIDE, 176
+    END
+
+    IDD_a_score_enter, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 523
+        VERTGUIDE, 7
+        VERTGUIDE, 11
+        VERTGUIDE, 68
+        VERTGUIDE, 75
+        VERTGUIDE, 195
+        VERTGUIDE, 200
+        VERTGUIDE, 250
+        VERTGUIDE, 255
+        VERTGUIDE, 305
+        VERTGUIDE, 310
+        VERTGUIDE, 360
+        VERTGUIDE, 364
+        VERTGUIDE, 415
+        VERTGUIDE, 420
+        VERTGUIDE, 434
+        VERTGUIDE, 485
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 199
+        HORZGUIDE, 10
+        HORZGUIDE, 25
+        HORZGUIDE, 30
+        HORZGUIDE, 45
+        HORZGUIDE, 50
+        HORZGUIDE, 65
+        HORZGUIDE, 70
+        HORZGUIDE, 85
+        HORZGUIDE, 90
+        HORZGUIDE, 105
+        HORZGUIDE, 110
+        HORZGUIDE, 125
+        HORZGUIDE, 130
+        HORZGUIDE, 145
+        HORZGUIDE, 150
+        HORZGUIDE, 165
+        HORZGUIDE, 170
+        HORZGUIDE, 185
+    END
+
+    IDD_a_score_analyse_average, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+        HORZGUIDE, 15
+        HORZGUIDE, 30
+        HORZGUIDE, 36
+        HORZGUIDE, 47
+        HORZGUIDE, 49
+        HORZGUIDE, 65
+        HORZGUIDE, 80
+    END
+
+    IDD_a_score_analyse_sum, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+        HORZGUIDE, 15
+        HORZGUIDE, 30
+        HORZGUIDE, 36
+        HORZGUIDE, 47
+        HORZGUIDE, 49
+        HORZGUIDE, 65
+        HORZGUIDE, 80
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP2             BITMAP  DISCARDABLE     "蓝天白云.bmp"
+IDB_BITMAP1             BITMAP  DISCARDABLE     "蓝天白云草原.bmp"
+IDB_BITMAP3             BITMAP  DISCARDABLE     "教务信息管理系统.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_APP_TITLE_ADMIN     "教务信息管理系统——管理员端"
+    IDS_APP_TITLE_TEACHER   "教务信息管理系统——教师端"
+    IDS_APP_TITLE_STUDENT   "教务信息管理系统——学生端"
+    IDS_HELLO               "Hello World!"
+    IDS_EDUCATIONMANAGESYSTEM "EDUCATIONMANAGESYSTEM"
+END
+
+#endif    // Chinese (中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
