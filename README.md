@@ -69,10 +69,10 @@ Hope you enjoy!
 
 
 
-========================================================================
-       WIN32 APPLICATION : Education manage system
+```
 ========================================================================
 
+#        WIN32 APPLICATION : Education manage system
 
 AppWizard has created this Education manage system application for you.  
 
@@ -123,5 +123,7 @@ Other notes:
 AppWizard uses "TODO:" to indicate parts of the source code you
 should add to or customize.
 
-
 /////////////////////////////////////////////////////////////////////////////
+```
+
+
